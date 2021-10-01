@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#header{
+    background: gray;
+    min-height: 100vh;
+}
+
+#navbar{
+    background: white;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+}
+#respnonsive__icon{
+    margin: 10px;
+}
+#respnonsive__icon button{
+    background: none;
+    border: none;
+}
+#respnonsive__icon img{
+    margin-right: 10px;
+}
+#app{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: white;
+  margin: 5% 5%; 
+}

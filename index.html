@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<div id="header">
+
+       
+        <div id="navbar">
+            <img src = "images/_J5.svg" alt="My Happy SVG"/>
+            <div id="respnonsive__icon">
+                <button v-on:click="mobileMessage"><img src = "images/_Jd.svg" alt="My Happy SVG"/></button>
+                <button v-on:click="tabMessage"><img src = "images/_KU.svg" alt="My Happy SVG"/></button>
+                <button v-on:click="desktopMessage"><img src = "images/_Jq.svg" alt="My Happy SVG"/></button>
+            </div>
+        </div>
+        <div id="app">
+            <h2 style="color: lightgray;">{{message}}</h2>
+        </div>
+ 
+ </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+              message: 'Hello World!'
+            },
+            methods: {
+                reverseMessage: function () {
+                this.message = this.message.split('').reverse().join('')
+            }
+          }
+        });
+        var respnonsive__icon = new Vue({
+            el: '#respnonsive__icon',
+           
+            methods: {
+            mobileMessage: function () {
+                 var app=document.getElementById('app');
+                 app.style.margin="5% 25%";
+            },
+            tabMessage: function () {
+                var app=document.getElementById('app');
+                app.style.margin=" 5% 20%";
+            },
+            desktopMessage: function () {
+                var app=document.getElementById('app');
+                app.style.margin=" 5% 5%";
+            },
+          }
+            
+        });
+    </script>
+</body>
+</html>
